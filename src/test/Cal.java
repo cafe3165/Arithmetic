@@ -5,14 +5,14 @@ public class Cal {
 		int fz,fm;
 		int next;
 	};
-	public int gcd(int m, int n){
+	public static int gcd(int m, int n){
 		while(true){
 			if((m = m % n) == 0)return n;
 			if((n = n % m) == 0)return m;
 		}
 	}
 	@SuppressWarnings("null")
-	public cnum add(cnum a,cnum b){
+	public static cnum add(cnum a,cnum b){
 		cnum c=null;
 		c.fz=a.fz*b.fm+a.fm*b.fz;
 		c.fm=a.fm*b.fm;
@@ -25,12 +25,12 @@ public class Cal {
 		}
 		return c;
 	}
-	public cnum del(cnum a,cnum b){
+	public static cnum del(cnum a,cnum b){
 		b.fz=-b.fz;
 		return add(a,b);
 	}
 	@SuppressWarnings("null")
-	public cnum mul(cnum a,cnum b){
+	public static cnum mul(cnum a,cnum b){
 		cnum c=null;
 		c.fz=a.fz*b.fz;
 		c.fm=a.fm*b.fm;
@@ -43,14 +43,14 @@ public class Cal {
 		}
 		return c;
 	}
-	public cnum unmul(cnum a,cnum b){
+	public static cnum unmul(cnum a,cnum b){
 		int x=b.fm;
 		b.fm=b.fz;
 		b.fz=x;
 		return mul(a,b);
 	}
 	@SuppressWarnings("null")
-	public cnum count(int nid, int lenid){
+	public static cnum count(int nid, int lenid){
 		cnum cnt = null,coutmp = null,re = null;
 		int fuh = 1,fuh2 = 1;
 		cnt.fz=0;
@@ -107,7 +107,7 @@ public class Cal {
 		}
 		return cnt;
 	}
-	public void cal(int id){
+	public static void cal(int id){
 		cnum tmp=null;
 		for(int cali=0;cali<Arith.n;cali++){
 			tmp = count(cali, 0);
