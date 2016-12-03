@@ -5,21 +5,49 @@ public class Cal {
 		int fz,fm;
 		int next;
 	};
+	public int gcd(int m, int n){
+		while(true){
+			if((m = m % n) == 0)return n;
+			if((n = n % m) == 0)return m;
+		}
+	}
+	@SuppressWarnings("null")
 	public cnum add(cnum a,cnum b){
 		cnum c=null;
+		c.fz=a.fz*b.fm+a.fm*b.fz;
+		c.fm=a.fm*b.fm;
+		int x=gcd(c.fz,c.fm);
+		c.fz/=x;
+		c.fm/=x;
+		if(c.fm<0){
+			c.fm=-c.fm;
+			c.fz=-c.fz;
+		}
 		return c;
 	}
 	public cnum del(cnum a,cnum b){
-		cnum c=null;
-		return c;
+		b.fz=-b.fz;
+		return add(a,b);
 	}
+	@SuppressWarnings("null")
 	public cnum mul(cnum a,cnum b){
 		cnum c=null;
+		c.fz=a.fz*b.fz;
+		c.fm=a.fm*b.fm;
+		int x=gcd(c.fz,c.fm);
+		c.fz/=x;
+		c.fm/=x;
+		if(c.fm<0){
+			c.fm=-c.fm;
+			c.fz=-c.fz;
+		}
 		return c;
 	}
 	public cnum unmul(cnum a,cnum b){
-		cnum c=null;
-		return c;
+		int x=b.fm;
+		b.fm=b.fz;
+		b.fz=x;
+		return mul(a,b);
 	}
 	@SuppressWarnings("null")
 	public cnum count(int nid, int lenid){
