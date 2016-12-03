@@ -9,7 +9,7 @@ public class Arith {
 	public static int[][] input=new int[10][2];	
 	public static boolean[] result=new boolean[10];
 	public static int n;
-	int rightAnswer;
+	public static int rightAnswer;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
