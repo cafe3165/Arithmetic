@@ -107,7 +107,7 @@ public class Cal {
 		}
 		return cnt;
 	}
-	public static void cal(int id){
+	public static void cal(){
 		cnum tmp=null;
 		for(int cali=0;cali<Arith.n;cali++){
 			tmp = count(cali, 0);
