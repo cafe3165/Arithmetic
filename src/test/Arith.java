@@ -16,16 +16,25 @@ public class Arith {
 	//@SuppressWarnings("resource")
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
+	
+	//生成式子
 	Gens gs=new Gens();
 	gs.Gens();
-	
+
+	//计算
 	Cal.cal();
 	
+	//显示式子
 	Fomula f=new Fomula();
 	f.printFomula();
+	
+	//对答案
 	Compare com=new Compare();
 	com.Compare();
 	
+	//输出结果
+	OutRes or=new OutRes();
+	or.OutRes();
 	
 //		System.out.println("hello");
 	}
