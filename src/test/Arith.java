@@ -16,11 +16,15 @@ public class Arith {
 	//@SuppressWarnings("resource")
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
-//	GenS();
-//	AddK();
-//	Cal();
-//	OutRes();
-//	Com();
+	Gens gs=new Gens();
+	gs.Gens();
+	
+	Cal.cal();
+	
+	Fomula f=new Fomula();
+	f.printFomula();
+	Compare com=new Compare();
+	com.Compare();
 	
 	
 //		System.out.println("hello");
