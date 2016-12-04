@@ -29,13 +29,16 @@ public class Input {
                     if(flag){
                         int n=Integer.parseInt(temp);
                         input[i][t]=n;
-                        t++;
+                        t=1;
                         temp="";
-                        flag=false;
                     }
                 }
             }
+            if(temp!="")
+                input[i][t]=Integer.parseInt(temp);
+                temp="";
         }
 
     }
+
 }
