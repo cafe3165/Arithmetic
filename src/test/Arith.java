@@ -10,31 +10,34 @@ public class Arith {
 	public static boolean[] result=new boolean[10];
 	public static int n;
 	public static int rightAnswer;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 	//@SuppressWarnings("resource")
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
-	
+	//System.out.println("hello!");
 	//生成式子
+	@SuppressWarnings("unused")
 	Gens gs=new Gens();
-	gs.Gens();
-
-	//计算
-	Cal.cal();
 	
-	//显示式子
+
+//	//计算
+//	Cal c=new Cal();
+//	Cal.cal();
+//	
+//	//显示式子
 	Fomula f=new Fomula();
 	f.printFomula();
-	
-	//对答案
-	Compare com=new Compare();
-	com.Compare();
-	
-	//输出结果
-	OutRes or=new OutRes();
-	or.outRes();
+//	
+//	//对答案
+//	Compare com=new Compare();
+//	com.Compare();
+//	
+//	//输出结果
+//	OutRes or=new OutRes();
+//	or.outRes();
 	
 //		System.out.println("hello");
 	}
