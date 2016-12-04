@@ -59,7 +59,7 @@ public class Gens {
 	 
 	   for(int i=0;i<10;i++){
 		   for(int j=0;j<Arith.lenS[i];j++){
-			   if(Arith.S[i][j][0]>=11&&Arith.S[i][j][0]<=16)Arith.S[i][j][1]=1;
+			   if(Arith.S[i][j][0]>=1&&Arith.S[i][j][0]<=16)Arith.S[i][j][1]=1;
 			   else Arith.S[i][j][1]=rand.nextInt(10)+1;
 		   }
 	   }

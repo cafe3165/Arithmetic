@@ -8,7 +8,7 @@ public class OutRes {
 		System.out.println("您答对了"+Arith.rightAnswer+"道题目！");
 		 double rightRate;
 		rightRate=((double)Arith.rightAnswer/Arith.n)*100;
-		System.out.println("分数为"+rightRate);
+		System.out.println("分数为"+(int)rightRate);
 		if(rightRate<60.0){
 			System.out.println("您本次小测不及格，希望您下次继续努力！");
 		}

@@ -29,10 +29,12 @@ public class GensTest {
 	}
 
 		boolean flag=false;
-		if(Arith.S[0][Arith.lenS[0]][0]<11&&Arith.S[1][Arith.lenS[1]][0]<11)
+		if(Arith.S[0][Arith.lenS[0]][0]!=13&&Arith.S[1][Arith.lenS[1]][0]!=14&&Arith.S[1][Arith.lenS[1]][0]!=15&&Arith.S[1][Arith.lenS[1]][0]!=16)
 		{
 			flag=true;
 		}
 		assertEquals(true, flag);
+		
+		
 	}
 }

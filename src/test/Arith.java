@@ -13,7 +13,8 @@ public class Arith {
 	
 	public static void main(String[] args) {
 		
-		while(true){
+		
+			
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
 	//生成式子
@@ -41,14 +42,6 @@ public class Arith {
 	OutRes or=new OutRes();
 	or.outRes();
 	
-	int want=0;
-	System.out.println("想不想再挑战一下？");
-	System.out.println("再来一遍输入1，任意数字退出。");
-	want=s.nextInt();
-	if(want!=1) break;
-	
-		}
-		System.out.println("再见！");
 	}
 
 }

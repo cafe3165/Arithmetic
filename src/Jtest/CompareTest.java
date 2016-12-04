@@ -21,7 +21,7 @@ public class CompareTest {
 		
 		Compare compare = new Compare();
 		compare.Compare();
-		
+		System.out.println(compare.getResult(0));
 		assertEquals(true,compare.getResult(0));
 	}
 
