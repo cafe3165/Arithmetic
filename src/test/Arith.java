@@ -33,6 +33,9 @@ public class Arith {
 	Cal c=new Cal();
 	Cal.cal();
 //	
+	//用户输入答案
+	
+	
 //	//对答案
 //	Compare com=new Compare();
 //	com.Compare();
