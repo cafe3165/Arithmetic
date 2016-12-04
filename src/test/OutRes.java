@@ -3,11 +3,12 @@ package test;
 public class OutRes {
 
 	
-	public void outRes(){
+	public double outRes(){
 		
-		System.out.println("你答对了"+Arith.rightAnswer+"道题目！");
-		float rightRate;
-		rightRate=Arith.rightAnswer/Arith.n;
+		System.out.println("您答对了"+Arith.rightAnswer+"道题目！");
+		 double rightRate;
+		rightRate=((double)Arith.rightAnswer/Arith.n)*100;
+		System.out.println("分数为"+rightRate);
 		if(rightRate<60.0){
 			System.out.println("您本次小测不及格，希望您下次继续努力！");
 		}
@@ -18,6 +19,7 @@ public class OutRes {
 		else{
 			System.out.println("你很棒哦！");
 		}
+		return rightRate;
 		
 		
 	}
