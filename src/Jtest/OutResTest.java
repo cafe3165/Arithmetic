@@ -16,7 +16,9 @@ public class OutResTest {
 		Arith.n=10;
 		
 		OutRes or=new OutRes();
+		
 		double rr=or.outRes();
+		
 		System.out.println(rr);
 		assertEquals(60.0,rr);
 	}
