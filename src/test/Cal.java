@@ -19,7 +19,6 @@ public class Cal {
 			if((n = n % m) == 0)return m;
 		}
 	}
-	@SuppressWarnings("null")
 	public static cnum add(cnum a,cnum b){
 		cnum c=new cnum(0,1);
 		c.fz=a.fz*b.fm+a.fm*b.fz;
@@ -37,7 +36,6 @@ public class Cal {
 		b.fz=-b.fz;
 		return add(a,b);
 	}
-	@SuppressWarnings("null")
 	public static cnum mul(cnum a,cnum b){
 		cnum c=new cnum(0,1);
 		c.fz=a.fz*b.fz;
