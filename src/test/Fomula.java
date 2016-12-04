@@ -1,7 +1,7 @@
 package test;
 import test.Arith;
 public class Fomula {
-	void printFomula()
+	public  void printFomula()
 	{
 		int i,j,k;
 		for(i = 0;i < Arith.n;i++)

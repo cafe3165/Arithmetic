@@ -34,7 +34,7 @@ public class Arith {
 	
 	//输出结果
 	OutRes or=new OutRes();
-	or.OutRes();
+	or.outRes();
 	
 //		System.out.println("hello");
 	}
