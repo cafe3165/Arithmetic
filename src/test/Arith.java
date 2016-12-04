@@ -23,13 +23,15 @@ public class Arith {
 	Gens gs=new Gens();
 	
 
-//	//计算
-//	Cal c=new Cal();
-//	Cal.cal();
-//	
+
 //	//显示式子
 	Fomula f=new Fomula();
 	f.printFomula();
+//	
+	
+//	//计算
+	Cal c=new Cal();
+	Cal.cal();
 //	
 //	//对答案
 //	Compare com=new Compare();

@@ -113,6 +113,8 @@ public class Cal {
 			tmp = count(cali, 0);
 			Arith.score[cali][0]=tmp.fz;
 			Arith.score[cali][1]=tmp.fm;
+			System.out.print(tmp.fz+" "+tmp.fm);
+			System.out.println(" ");
 		}
 	}
 	
