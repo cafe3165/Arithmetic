@@ -21,4 +21,9 @@ public class Compare {
 			}
 		}
 	}
+	
+	public boolean getResult(int i){
+		
+		return Arith.result[i];
+	}
 }
