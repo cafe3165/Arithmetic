@@ -30,19 +30,20 @@ public class Arith {
 //	
 	
 //	//计算
-	Cal c=new Cal();
+	//Cal c=new Cal();
 	Cal.cal();
 //	
 	//用户输入答案
-	
+	//Input in=new Input();
+	Input.Input();
 	
 //	//对答案
-//	Compare com=new Compare();
-//	com.Compare();
+	Compare com=new Compare();
+	com.Compare();
 //	
 //	//输出结果
-//	OutRes or=new OutRes();
-//	or.outRes();
+	OutRes or=new OutRes();
+	or.outRes();
 	
 //		System.out.println("hello");
 	}

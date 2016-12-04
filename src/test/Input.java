@@ -16,10 +16,10 @@ public class Input {
         String[] answerarray = answer.split(" ");
         String temp="";
         boolean flag=true;
-        for(int i=0;i<10;i++){
+        for(int i=0;i<num;i++){
             input[i][1]=1;
         }
-        for(int i=0;i<10;i++){
+        for(int i=0;i<num;i++){
             int t=0;
             for(int j=0;j<answerarray[i].length();j++){
                 if(answerarray[i].charAt(j)>=48&&answerarray[i].charAt(j)<=57){
