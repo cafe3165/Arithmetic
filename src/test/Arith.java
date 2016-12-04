@@ -12,12 +12,10 @@ public class Arith {
 	public static int rightAnswer;
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-	//@SuppressWarnings("resource")
+		while(true){
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
-	//System.out.println("hello!");
 	//生成式子
 	@SuppressWarnings("unused")
 	Gens gs=new Gens();
@@ -30,11 +28,9 @@ public class Arith {
 //	
 	
 //	//计算
-	//Cal c=new Cal();
 	Cal.cal();
 //	
 	//用户输入答案
-	//Input in=new Input();
 	Input.Input();
 	
 //	//对答案
@@ -45,7 +41,14 @@ public class Arith {
 	OutRes or=new OutRes();
 	or.outRes();
 	
-//		System.out.println("hello");
+	int want=0;
+	System.out.println("想不想再挑战一下？");
+	System.out.println("再来一遍输入1，任意数字退出。");
+	want=s.nextInt();
+	if(want!=1) break;
+	
+		}
+		System.out.println("再见！");
 	}
 
 }

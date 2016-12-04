@@ -4,6 +4,7 @@ public class OutRes {
 
 	
 	public void outRes(){
+		
 		System.out.println("你答对了"+Arith.rightAnswer+"道题目！");
 		float rightRate;
 		rightRate=Arith.rightAnswer/Arith.n;
