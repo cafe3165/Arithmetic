@@ -13,7 +13,7 @@ public class Gens {
 		int knum=0;
 		int num=0;
 	
-		for(int i=0;i<Arith.n;i++){
+		for(int i=0;i<Arith.n;i++){  //运算符
 			for(int j=0;j<20;j++){
 				
 				jud1=rand.nextInt(2)+0;	
@@ -25,13 +25,13 @@ public class Gens {
 					num++;
 				}
 				
-				Arith.S[i][j][0]=rand.nextInt(10)+1;
+				Arith.S[i][j][0]=rand.nextInt(10)+1;    //数字随机
 				Arith.lenS[i]++;
 				j=j+1;
 				
-				
+				//括号生成
 				jud1=rand.nextInt(2)+0;	
-				if(j>=4&&j<35){
+				if(j>=4&&j<15){
 					if(knum>=1)jud1=1;
 				if(jud1==1&&Arith.S[i][j-2][0]!=11&&knum!=0){
 					Arith.S[i][j][0]=12;
@@ -39,7 +39,7 @@ public class Gens {
 					Arith.lenS[i]++;
 					if(knum>0)knum--;
 				}}
-				if(j>=35){
+				if(j>=15){
 					jud1=1;
 					if(jud1==1&&Arith.S[i][j-2][0]!=11&&knum!=0){
 						Arith.S[i][j][0]=12;
@@ -52,8 +52,13 @@ public class Gens {
 					if(jud==1&&knum==0)break;
 				
 				}
-				Arith.S[i][j][0]=rand.nextInt(4)+13;
-				Arith.lenS[i]++;
+				  if(Arith.lenS[i]!=19) {
+				     Arith.S[i][j][0]=rand.nextInt(4)+13;
+				      Arith.lenS[i]++;
+				  }
+			
+				
+				
 			}
 		}
 	 
@@ -67,6 +72,8 @@ public class Gens {
 	   
 
 	}
-	
 
+	
 }
+
+
