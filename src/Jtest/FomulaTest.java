@@ -11,13 +11,13 @@ public class FomulaTest {
 	@Test
 	public void testPrintFomula() {
 		Arith.n=2;
-		Arith.S[0][0][0]=1;
-		Arith.S[0][0][1]=2;
+		Arith.S[0][0][0]=7;
+		Arith.S[0][0][1]=1;
 		
 		Arith.S[0][1][0]=13;
 		Arith.S[0][1][1]=1;
 		
-		Arith.S[0][2][0]=1;
+		Arith.S[0][2][0]=6;
 		Arith.S[0][2][1]=3;
 		
 		//////////////////////
