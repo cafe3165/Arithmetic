@@ -18,10 +18,10 @@ public class Fomula {
 						   if(Arith.S[i][j][0]==14)System.out.print("-");
 						   if(Arith.S[i][j][0]==15)System.out.print("*");
 						   if(Arith.S[i][j][0]==16)System.out.print("/");
-						   if(Arith.S[i][j][0]>=1&&Arith.S[i][j][0]<=10) System.out.print(Arith.S[i][j][0]+"/"+Arith.S[i][j][1]+"");
+						   if(Arith.S[i][j][0]>=1&&Arith.S[i][j][0]<=10) System.out.print(Arith.S[i][j][0]+"/"+Arith.S[i][j][1]);
 					   }
 					   else
-					   System.out.print(Arith.S[i][j][0]+"/"+Arith.S[i][j][1]+"");
+					   System.out.print(Arith.S[i][j][0]+"/"+Arith.S[i][j][1]);
 
 				   }
 //				   System.out.print("\n");
