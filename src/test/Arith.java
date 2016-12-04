@@ -10,33 +10,45 @@ public class Arith {
 	public static boolean[] result=new boolean[10];
 	public static int n;
 	public static int rightAnswer;
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-	//@SuppressWarnings("resource")
+		while(true){
 	Scanner s=new Scanner(System.in)	;
 	n=s.nextInt();
-	
 	//生成式子
+	@SuppressWarnings("unused")
 	Gens gs=new Gens();
-	gs.Gens();
-
-	//计算
-	Cal.cal();
 	
-	//显示式子
+
+
+//	//显示式子
 	Fomula f=new Fomula();
 	f.printFomula();
+//	
 	
-	//对答案
+//	//计算
+	Cal.cal();
+//	
+	//用户输入答案
+	Input.Input();
+	
+//	//对答案
 	Compare com=new Compare();
 	com.Compare();
-	
-	//输出结果
+//	
+//	//输出结果
 	OutRes or=new OutRes();
-	or.OutRes();
+	or.outRes();
 	
-//		System.out.println("hello");
+	int want=0;
+	System.out.println("想不想再挑战一下？");
+	System.out.println("再来一遍输入1，任意数字退出。");
+	want=s.nextInt();
+	if(want!=1) break;
+	
+		}
+		System.out.println("再见！");
 	}
 
 }

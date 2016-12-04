@@ -1,9 +1,17 @@
 package test;
 
 public class Cal {
-	public class cnum{
+	public static class cnum{
 		int fz,fm;
 		int next;
+		
+		cnum(int z,int m ){
+			fz=z;fm=m;
+		}
+		
+		cnum(){
+			
+		}
 	};
 	public static int gcd(int m, int n){
 		while(true){
@@ -13,7 +21,7 @@ public class Cal {
 	}
 	@SuppressWarnings("null")
 	public static cnum add(cnum a,cnum b){
-		cnum c=null;
+		cnum c=new cnum(0,1);
 		c.fz=a.fz*b.fm+a.fm*b.fz;
 		c.fm=a.fm*b.fm;
 		int x=gcd(c.fz,c.fm);
@@ -31,7 +39,7 @@ public class Cal {
 	}
 	@SuppressWarnings("null")
 	public static cnum mul(cnum a,cnum b){
-		cnum c=null;
+		cnum c=new cnum(0,1);
 		c.fz=a.fz*b.fz;
 		c.fm=a.fm*b.fm;
 		int x=gcd(c.fz,c.fm);
@@ -51,12 +59,17 @@ public class Cal {
 	}
 	@SuppressWarnings("null")
 	public static cnum count(int nid, int lenid){
-		cnum cnt = null,coutmp = null,re = null;
+		cnum re = new cnum(0,1);
+		
 		int fuh = 1,fuh2 = 1;
-		cnt.fz=0;
-		cnt.fm=1;
-		coutmp.fz=1;
-		coutmp.fm=1;
+		cnum cnt=new cnum(0,1);
+		
+//		cnt.fz=0;
+//		cnt.fm=1;
+		
+		cnum coutmp=new cnum(1,1);
+//		coutmp.fz=1;
+//		coutmp.fm=1;
 		for(int coui=lenid;coui<Arith.lenS[nid];coui++){
 			if(Arith.S[nid][coui][0]==11){
 				re=count(nid,coui+1);
@@ -113,6 +126,8 @@ public class Cal {
 			tmp = count(cali, 0);
 			Arith.score[cali][0]=tmp.fz;
 			Arith.score[cali][1]=tmp.fm;
+			System.out.print(tmp.fz+" "+tmp.fm);
+			System.out.println(" ");
 		}
 	}
 	
