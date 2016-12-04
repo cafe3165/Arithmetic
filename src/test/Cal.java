@@ -15,8 +15,10 @@ public class Cal {
 	};
 	public static int gcd(int m, int n){
 		while(true){
-			if((m = m % n) == 0)return n;
-			if((n = n % m) == 0)return m;
+			m = m % n;
+			if(m == 0)return n;
+			n = n % m;
+			if(n == 0)return m;
 		}
 	}
 	public static cnum add(cnum a,cnum b){
@@ -30,6 +32,7 @@ public class Cal {
 			c.fm=-c.fm;
 			c.fz=-c.fz;
 		}
+		c.next=a.next;
 		return c;
 	}
 	public static cnum del(cnum a,cnum b){
@@ -40,6 +43,10 @@ public class Cal {
 		cnum c=new cnum(0,1);
 		c.fz=a.fz*b.fz;
 		c.fm=a.fm*b.fm;
+//		if(c.fz==0){
+//			c.fm=1;
+//			return c;
+//		}
 		int x=gcd(c.fz,c.fm);
 		c.fz/=x;
 		c.fm/=x;
@@ -47,6 +54,7 @@ public class Cal {
 			c.fm=-c.fm;
 			c.fz=-c.fz;
 		}
+		c.next=a.next;
 		return c;
 	}
 	public static cnum unmul(cnum a,cnum b){
@@ -55,7 +63,6 @@ public class Cal {
 		b.fz=x;
 		return mul(a,b);
 	}
-	@SuppressWarnings("null")
 	public static cnum count(int nid, int lenid){
 		cnum re = new cnum(0,1);
 		
@@ -69,14 +76,16 @@ public class Cal {
 //		coutmp.fz=1;
 //		coutmp.fm=1;
 		for(int coui=lenid;coui<Arith.lenS[nid];coui++){
+			
 			if(Arith.S[nid][coui][0]==11){
 				re=count(nid,coui+1);
-				lenid=re.next;
+				coui=re.next;
 			}
 			else{
 				re.fz=Arith.S[nid][coui][0];
 				re.fm=Arith.S[nid][coui][1];
 			}
+			//System.out.println(re.fz+ " "+ re.fm + " " + re.next);
 			if(fuh2==1){
 				coutmp=mul(coutmp,re);
 			}
@@ -84,7 +93,9 @@ public class Cal {
 				coutmp=unmul(coutmp,re);
 			}
 			coui++;
-			if(coui==Arith.lenS[nid]){
+			cnt.next=coui;
+			if(Arith.S[nid][coui][0]==12||coui==Arith.lenS[nid]){
+				//System.out.println("asda"+ cnt.next);
 				if(fuh==1){
 					cnt=add(cnt,coutmp);
 				}
@@ -116,10 +127,11 @@ public class Cal {
 				fuh2=2;
 			}
 		}
+		//System.out.println("out"+cnt.fz+" "+cnt.fm+" "+cnt.next);
 		return cnt;
 	}
 	public static void cal(){
-		cnum tmp=null;
+		cnum tmp=new cnum(0,1);
 		for(int cali=0;cali<Arith.n;cali++){
 			tmp = count(cali, 0);
 			Arith.score[cali][0]=tmp.fz;
